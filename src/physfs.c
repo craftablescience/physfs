@@ -2695,7 +2695,6 @@ static PHYSFS_File *doOpenWrite(const char *_fname, const int appending)
     fname = allocated_fname + longest_root + 1;
 
     if (sanitizePlatformIndependentPath(_fname, fname)) {
-        PHYSFS_Io *io = NULL;
         DirHandle *i;
 
         for (i = searchPath; i != NULL; i = i->next) {
